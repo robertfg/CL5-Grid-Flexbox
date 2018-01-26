@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- meta tags -->
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<title>Grid and Flexbox Examples</title>
+
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<h1>CSS Grid and Flexbox Examples</h1>
+
+		<!-- Flexbox Example No.1 -->
+		<h2>Flexbox Example No.1</h2>
+		<p>
+			1D layout - when you wrap flex items (flex-wrap), each new row becomes a flex container.
+			<br />Space is distributed evenly across the row.
+			<br />Use Flexbox when you want to space items evenly in a container; works from content out.
+			<br />With the flex layout, if we drag our window wider and smaller, the flexbox nicely deals with adjusting the number of items in each row according to the available space. If we have a lot of space all five items can fit on one row, if we have a very narrow container we might just have space for one.
+		</p>
+		<div class="wrapper">
+		  <div>One</div>
+		  <div>Two</div>
+		  <div>Three</div>
+		  <div>Four</div>
+		  <div>Five</div>
+		</div>
+
+		<!-- CSS Grid Example No.1 -->
+		<h2>CSS Grid Example No.1</h2>
+		<p>
+			2D layout - make the items line up.
+			<br />Grid works from the layout in: create layout and place items in it.
+			<br />Use Grid when you start to disable some of Flexbox's flexibility.
+			<br />In comparison, the grid version always has three column tracks. The tracks themselves will grow and shrink, but there are always three as we asked for three when defining our grid.
+		</p>
+		<div class="gwrapper gwrapper1">
+		  <div>One</div>
+		  <div>Two</div>
+		  <div>Three</div>
+		  <div>Four</div>
+		  <div>Five</div>
+		</div>
+
+		<!-- Flexbox Example No.2 -->
+		<h2>Flexbox Example No.2</h2>
+		<p>
+			Box alignment using flex-start and  flex-end.
+		</p>
+		<div class="wrapper2">
+		  <div class="box1">One</div>
+		  <div class="box2">Two</div>
+		  <div class="box3">Three</div>
+		</div>
+
+		<!-- CSS Grid Example No.2 -->
+		<h2>CSS Grid Example No.2</h2>
+		<p>
+			Box alignment using start and end.
+			<br />Align items in grid area.
+		</p>
+		<div class="gwrapper gwrapper2">
+		  <div class="gbox1">One</div>
+		  <div class="gbox2">Two</div>
+		  <div class="gbox3">Three</div>
+		</div>
+
+		<!-- Add lines -->
+		<br />
+		<br />
+		<br />
+
+		<!-- CSS Grid Example No.3 -->
+		<h2>CSS Grid Example No.3</h2>
+		<h3>Auto-filling grid tracks</h3>
+		<p>
+			Similar, but not the same as Flexbox example no.1
+			<br />In Flexbox, the items are larger than 200px before wrapping.
+		</p>
+		<div class="gwrapper gwrapper3">
+		  <div class="gbox3">One</div>
+		  <div class="gbox3">Two</div>
+		  <div class="gbox3">Three</div>
+		</div>
+
+		<!-- Add lines -->
+		<br />
+		<br />
+		<br />
+
+		<!-- CSS Grid Example No.4 -->
+		<h2>CSS Grid Example No.4</h2>
+		<h3>Auto-filling grid tracks</h3>
+		<p>
+			Similar effect as Flexbox example no.1 - but again not the same
+			<br />Uses minmax
+			<br />These boxes will stretch until they reach a max of 1fr, then collapse to 200px.
+			<br />There's a point where the boxes won't stretch any wider, because there's room for another 200px box.
+		</p>
+		<div class="gwrapper gwrapper4">
+		  <div class="gbox4">One</div>
+		  <div class="gbox4">Two</div>
+		  <div class="gbox4">Three</div>
+			<div class="gbox4">Four</div>
+			<div class="gbox4">Five</div>
+		</div>
+
+		<!-- Add lines -->
+		<br />
+		<br />
+		<br />
+
+		<!-- CSS Grid Example No.5 -->
+		<h2>CSS Grid Example No.5</h2>
+		<h3>Grid and absolutely positioned elements</h3>
+		<p>
+			Make the grid container a containing block, add the position property to the container with a value of relative.
+			<br />Making the position relative changes the positioning context for the items.
+			<br />Give gbox5-3 a position value of absolute.  Its position is now relative to the parent container, not the viewport.
+			<br />The box will always be 40px to the right of grid-column 2 and 40px below grid-row 1.
+		</p>
+		<div class="gwrapper gwrapper5">
+		  <div class="gbox5-1">One</div>
+		  <div class="gbox5-2">Two</div>
+		  <div class="gbox5-3">
+		   This block is absolutely positioned. In this example the grid container is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the area it has been placed into.
+		  </div>
+		  <div class="gbox5-4">Four</div>
+		</div>
+
+		<!-- Add lines -->
+		<br />
+		<br />
+		<br />
+
+		<!-- CSS Grid Example No.6 -->
+		<h2>CSS Grid Example No.6</h2>
+		<h3>Grid area as parent</h3>
+		<p>
+			Make the third box position relative.
+			<br />Give a box in this area an absolute position.
+		</p>
+		<div class="gwrapper gwrapper6">
+		  <div class="gbox6-1">One</div>
+		  <div class="gbox6-2">Two</div>
+		  <div class="gbox6-3">Three
+		    <div class="abspos">
+		     This block is absolutely positioned. In this example the grid area is the containing block and so the absolute positioning offset values are calculated in from the outer edges of the grid area.
+		    </div>
+		  </div>
+		  <div class="gbox6-4">Four</div>
+		</div>
+
+		<!-- Add lines -->
+		<br />
+		<br />
+		<br />
+
+		<!-- CSS Grid Example No.7 -->
+		<h2>CSS Grid Example No.7</h2>
+		<h3>Grid and display: contents</h3>
+		<p>
+			Set an item to display: contents and the box it would normally create disappears.
+			<br />Boxes of child elements appear as though they've risen a level.
+			<br />Sub-items become grid items and lay themselves out using auto-placement rules.
+			<br />Get items nested into the grid to act as if they're part of the grid.
+			<br />This doesn't work in Atom's preview.  You'll need to display it in a browser.
+		</p>
+		<div class="gwrapper gwrapper7">
+		  <div class="gbox7 gbox7-1">
+		    <div class="nested">a</div>
+		    <div class="nested">b</div>
+		    <div class="nested">c</div>
+		  </div>
+		  <div class="gbox7 gbox7-2">Two</div>
+		  <div class="gbox7 gbox7-3">Three</div>
+		  <div class="gbox7 gbox7-4">Four</div>
+		  <div class="gbox7 gbox7-5">Five</div>
+		</div>
+
+		<!-- Add lines -->
+		<br />
+		<br />
+		<br />
+
+		<!-- Scripts -->
+		<script src="js/scripts.js"></script>
+	</body>
+</html>
